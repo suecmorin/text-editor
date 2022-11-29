@@ -1,0 +1,32 @@
+{
+  "name": "text-editor",
+  "version": "1.0.0",
+  "description": "text editor",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/suecmorin/text-editor.git"
+  },
+  "author": "Sue Morin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/suecmorin/text-editor/issues"
+  },
+  "homepage": "https://github.com/suecmorin/text-editor#readme",
+  "dependencies": {
+    "@babel/core": "^7.20.5",
+    "@babel/preset-env": "^7.20.2",
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^9.1.0",
+    "css-loader": "^6.7.2",
+    "express": "^4.18.2",
+    "webpack": "^5.75.0",
+    "webpack-dev-server": "^4.11.1",
+    "webpack-plugin": "^1.0.5",
+    "webpack-pwa-manifest": "^4.3.0"
+  }
+}
