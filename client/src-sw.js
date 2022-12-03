@@ -27,7 +27,7 @@ warmStrategyCache({
 
 registerRoute(({ request }) => request.mode === 'navigate', pageCache);
 
-// TODO: Implement asset caching
+// Implement asset caching--credit Chrome Developers "caching resources during runtime"
 const scriptsRoute = new Route(({ request }) => {
   return request.destination === 'script';
 }, new CacheFirst ({
