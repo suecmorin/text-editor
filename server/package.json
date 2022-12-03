@@ -1,5 +1,5 @@
 {
-    "name": "Just Another Text Editor",
+    "name": "Text Editor",
     "version": "1.0.0",
     "description": "",
     "main": "server.js",
