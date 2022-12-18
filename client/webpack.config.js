@@ -8,6 +8,7 @@ module.exports = () => {
     mode: 'development',
     entry: {
       main: './src/js/index.js',
+      install: './src/js/install.js'
     },
     output: {
       filename: '[name].bundle.js',
@@ -17,23 +18,23 @@ module.exports = () => {
     plugins: [
       new HtmlWebpackPlugin({
         template: './index.html',
-        title: 'Text editor'
+        title: 'JATE'
       }),
       new InjectManifest({
         swSrc: './src-sw.js',
         swDest: 'src-sw.js'
       }),
       new WebpackPwaManifest({
-        name: 'Text editor',
+        name: 'JATE',
         short_name: 'Text editor',
-        description: 'Keep track of important tasks!',
+        description: 'Text Editor',
         background_color: '#7eb4e2',
         theme_color: '#7eb4e2',
         start_url: './',
         publicPath: './',
         icons: [
           {
-            src: path.resolve('src/logo.png'),
+            src: path.resolve('src/images/logo.png'),
             sizes: [96, 128, 192, 256, 384, 512],
             destination: path.join('assets', 'icons'),
 
