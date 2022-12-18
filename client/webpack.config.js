@@ -18,32 +18,33 @@ module.exports = () => {
     plugins: [
       new HtmlWebpackPlugin({
         template: './index.html',
-        title: 'JATE'
+        title: 'J.A.T.E.'
       }),
       new InjectManifest({
         swSrc: './src-sw.js',
-        swDest: 'src-sw.js'
+        swDest: 'src-sw.js',
       }),
       new WebpackPwaManifest({
-        name: 'JATE',
-        short_name: 'Text editor',
+        fingerprints: false,
+        inject: true,
+        name: 'Just Another Text Editor',
+        short_name: 'TJATE',
         description: 'Text Editor',
         background_color: '#7eb4e2',
         theme_color: '#7eb4e2',
-        start_url: './',
-        publicPath: './',
+        start_url: '/',
+        publicPath: '/',
         icons: [
           {
             src: path.resolve('src/images/logo.png'),
             sizes: [96, 128, 192, 256, 384, 512],
             destination: path.join('assets', 'icons'),
-
           },
         ],
       }),
     ],
     // Add CSS loaders and babel to webpack.
-
+module: {
     rules: [
       {
         test: /\.css$/i,
@@ -61,6 +62,7 @@ module.exports = () => {
         },
       },
     ],
+  },
   };
 };
 
